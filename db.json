@@ -1,0 +1,146 @@
+[{
+  "model": "control.bus",
+  "pk": 1,
+  "fields": {
+    "capacity": 10,
+    "indetifier": "JJJJ-01"
+  }
+}, {
+  "model": "control.bus",
+  "pk": 2,
+  "fields": {
+    "capacity": 10,
+    "indetifier": "JJJJ-02"
+  }
+}, {
+  "model": "control.driver",
+  "pk": 1,
+  "fields": {
+    "name": "Dominic Toretto",
+    "phone": null,
+    "email": null
+  }
+}, {
+  "model": "control.driver",
+  "pk": 2,
+  "fields": {
+    "name": "Frank Martin",
+    "phone": null,
+    "email": null
+  }
+}, {
+  "model": "control.driver",
+  "pk": 3,
+  "fields": {
+    "name": "Ayrton Senna",
+    "phone": null,
+    "email": null
+  }
+}, {
+  "model": "control.route",
+  "pk": 1,
+  "fields": {
+    "name": "Santiago - Valpara\u00edso",
+    "duration": 2.0
+  }
+}, {
+  "model": "control.route",
+  "pk": 2,
+  "fields": {
+    "name": "Santiago - Vi\u00f1a del Mar",
+    "duration": null
+  }
+}, {
+  "model": "control.route",
+  "pk": 3,
+  "fields": {
+    "name": "Santiago - Talca",
+    "duration": 3.0
+  }
+}, {
+  "model": "control.route",
+  "pk": 4,
+  "fields": {
+    "name": "Santiago - La Serena",
+    "duration": null
+  }
+}, {
+  "model": "control.route",
+  "pk": 5,
+  "fields": {
+    "name": "Valpara\u00edso - Santiago",
+    "duration": 2.0
+  }
+}, {
+  "model": "control.route",
+  "pk": 6,
+  "fields": {
+    "name": "Vi\u00f1a del Mar - Santiago",
+    "duration": 2.0
+  }
+}, {
+  "model": "control.route",
+  "pk": 7,
+  "fields": {
+    "name": "Talca - Santiago",
+    "duration": 3.0
+  }
+}, {
+  "model": "control.route",
+  "pk": 8,
+  "fields": {
+    "name": "La Serena - Santiago",
+    "duration": 5.0
+  }
+}, {
+  "model": "control.route",
+  "pk": 9,
+  "fields": {
+    "name": "Santiago - Temuco",
+    "duration": 9.0
+  }
+}, {
+  "model": "control.route",
+  "pk": 10,
+  "fields": {
+    "name": "Temuco - Santiago",
+    "duration": 9.0
+  }
+}, {
+  "model": "control.itinerary",
+  "pk": 1,
+  "fields": {
+    "route": 1,
+    "bus": 1,
+    "driver": 1,
+    "start_time": "2018-09-10T15:00:00Z",
+    "end_time": "2018-09-10T17:00:00Z"
+  }
+}, {
+  "model": "control.passanger",
+  "pk": 1,
+  "fields": {
+    "itinerary": 1,
+    "name": "Jes\u00fas Urrutia",
+    "phone": null,
+    "emergency_name": null,
+    "emergency_phone": null
+  }
+}, {
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$ydKwxwLWSJc1$hItmKvXaABAcQBf5qcul3XaZuydOsrrXMFC74pCYBbk=",
+    "last_login": "2018-09-10T01:27:03.882Z",
+    "is_superuser": true,
+    "username": "jesusgoku",
+    "first_name": "",
+    "last_name": "",
+    "email": "jesus.urrutia@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2018-09-10T01:26:56.924Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}]

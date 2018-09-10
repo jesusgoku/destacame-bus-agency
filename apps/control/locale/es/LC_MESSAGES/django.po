@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-09 22:09-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/control/models.py:10
+msgid "Capacity"
+msgstr "Capacidad"
+
+#: apps/control/models.py:12
+msgid "Indetifier"
+msgstr "Patente"
+
+#: apps/control/models.py:18 apps/control/models.py:54
+msgid "Bus"
+msgstr "Bus"
+
+#: apps/control/models.py:19
+msgid "Buses"
+msgstr "Buses"
+
+#: apps/control/models.py:24 apps/control/models.py:39
+#: apps/control/models.py:76
+msgid "Name"
+msgstr "Nombre"
+
+#: apps/control/models.py:26 apps/control/models.py:77
+msgid "Phone"
+msgstr "Teléfono"
+
+#: apps/control/models.py:27
+msgid "Email"
+msgstr "Email"
+
+#: apps/control/models.py:33 apps/control/models.py:55
+msgid "Driver"
+msgstr "Conductor"
+
+#: apps/control/models.py:34
+msgid "Drivers"
+msgstr "Conductores"
+
+#: apps/control/models.py:41
+msgid "Duration"
+msgstr "Duración"
+
+#: apps/control/models.py:47 apps/control/models.py:53
+msgid "Route"
+msgstr "Ruta"
+
+#: apps/control/models.py:48
+msgid "Routes"
+msgstr "Rutas"
+
+#: apps/control/models.py:57
+msgid "Start time"
+msgstr "Partida"
+
+#: apps/control/models.py:58
+msgid "End time"
+msgstr "Llegada"
+
+#: apps/control/models.py:68 apps/control/models.py:74
+msgid "Itinerary"
+msgstr "Itinerario"
+
+#: apps/control/models.py:69
+msgid "Itineraries"
+msgstr "Itinerarios"
+
+#: apps/control/models.py:79
+msgid "Emergency name"
+msgstr "Nombre de emergencia"
+
+#: apps/control/models.py:80
+msgid "Emergency phone"
+msgstr "Teléfono de emergencia"
+
+#: apps/control/models.py:86
+msgid "Passenger"
+msgstr "Pasajero"
+
+#: apps/control/models.py:87
+msgid "Passengers"
+msgstr "Pasajeros"
