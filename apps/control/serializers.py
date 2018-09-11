@@ -5,4 +5,4 @@ from . import models
 class BusSerializer(serializers.HyperlinkedModelSerializer):
     class Meta(object):
         model = models.Bus
-        fields = ('id', 'capacity', 'indetifier',)
+        fields = ('id', 'capacity', 'idetifier',)

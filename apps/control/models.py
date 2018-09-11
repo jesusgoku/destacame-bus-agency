@@ -9,10 +9,10 @@ from django.utils.translation import gettext_lazy as _
 class Bus(models.Model):
     capacity = models.IntegerField(_('Capacity'), default=10)
 
-    indetifier = models.CharField(_('Indetifier'), max_length=255, unique=True)
+    idetifier = models.CharField(_('Idetifier'), max_length=255, unique=True)
 
     def __str__(self):
-        return self.indetifier
+        return self.idetifier
 
     class Meta(object):
         verbose_name = _('Bus')
@@ -73,14 +73,16 @@ class Itinerary(models.Model):
 class Passanger(models.Model):
     itinerary = models.ForeignKey(Itinerary, on_delete=models.CASCADE, verbose_name=_('Itinerary'))
 
-    name = models.CharField(_('Name'), max_length=255)
+    position = models.IntegerField(_('Position'))
+
+    name = models.CharField(_('Name'), max_length=255, null=True, blank=True)
     phone = models.CharField(_('Phone'), max_length=50, null=True, blank=True)
 
     emergency_name = models.CharField(_('Emergency name'), max_length=255, null=True, blank=True)
     emergency_phone = models.CharField(_('Emergency phone'), max_length=50, null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return '{} {}'.format(self.itinerary, self.position)
 
     class Meta(object):
         verbose_name = _('Passenger')
