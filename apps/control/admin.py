@@ -23,7 +23,7 @@ class RouteAdmin(admin.ModelAdmin):
 
 @admin.register(models.Itinerary)
 class ItineraryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'route', 'bus', 'driver', 'start_time', 'end_time')
+    list_display = ('id', 'route', 'bus', 'driver', 'start_time', 'end_time', 'capacity', 'capacity_sold')
 
 
 @admin.register(models.Passanger)

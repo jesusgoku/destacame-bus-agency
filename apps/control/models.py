@@ -58,6 +58,18 @@ class Itinerary(models.Model):
     start_time = models.DateTimeField(_('Start time'))
     end_time = models.DateTimeField(_('End time'))
 
+    @property
+    def capacity(self):
+        return self.bus.capacity
+
+    capacity.fget.short_description = _('Capacity')
+
+    @property
+    def capacity_sold(self):
+        return self.passanger_set.count()
+
+    capacity_sold.fget.short_description = _('Capacity sold')
+
     def __str__(self):
         return "{} / {} ({} / {})".format(
             self.route,
