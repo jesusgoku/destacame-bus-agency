@@ -18,7 +18,7 @@ class DriverAdmin(admin.ModelAdmin):
 
 @admin.register(models.Route)
 class RouteAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'duration')
+    list_display = ('id', 'name', 'duration', 'average_passengers')
 
 
 @admin.register(models.Itinerary)
