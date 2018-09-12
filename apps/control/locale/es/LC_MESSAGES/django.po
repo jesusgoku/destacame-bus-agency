@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-09 22:09-0300\n"
+"POT-Creation-Date: 2018-09-11 23:35-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,9 @@ msgid "Capacity"
 msgstr "Capacidad"
 
 #: apps/control/models.py:12
-msgid "Indetifier"
+#, fuzzy
+#| msgid "Indetifier"
+msgid "Idetifier"
 msgstr "Patente"
 
 #: apps/control/models.py:18 apps/control/models.py:54
@@ -35,11 +37,11 @@ msgid "Buses"
 msgstr "Buses"
 
 #: apps/control/models.py:24 apps/control/models.py:39
-#: apps/control/models.py:76
+#: apps/control/models.py:78
 msgid "Name"
 msgstr "Nombre"
 
-#: apps/control/models.py:26 apps/control/models.py:77
+#: apps/control/models.py:26 apps/control/models.py:79
 msgid "Phone"
 msgstr "Teléfono"
 
@@ -83,18 +85,22 @@ msgstr "Itinerario"
 msgid "Itineraries"
 msgstr "Itinerarios"
 
-#: apps/control/models.py:79
+#: apps/control/models.py:76
+msgid "Position"
+msgstr "Posición"
+
+#: apps/control/models.py:81
 msgid "Emergency name"
 msgstr "Nombre de emergencia"
 
-#: apps/control/models.py:80
+#: apps/control/models.py:82
 msgid "Emergency phone"
 msgstr "Teléfono de emergencia"
 
-#: apps/control/models.py:86
+#: apps/control/models.py:88
 msgid "Passenger"
 msgstr "Pasajero"
 
-#: apps/control/models.py:87
+#: apps/control/models.py:89
 msgid "Passengers"
 msgstr "Pasajeros"
