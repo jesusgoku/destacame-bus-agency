@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.core.exceptions import ValidationError
+from django.core.validators import MinValueValidator
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.dateformat import format
 from django.utils.translation import gettext_lazy as _
@@ -113,7 +114,7 @@ class Itinerary(models.Model):
 class Passanger(models.Model):
     itinerary = models.ForeignKey(Itinerary, on_delete=models.CASCADE, verbose_name=_('Itinerary'))
 
-    position = models.IntegerField(_('Position'))
+    position = models.IntegerField(_('Position'), validators=[MinValueValidator(1)])
 
     name = models.CharField(_('Name'), max_length=255, null=True, blank=True)
     phone = models.CharField(_('Phone'), max_length=50, null=True, blank=True)
