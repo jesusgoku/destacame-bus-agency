@@ -5,12 +5,27 @@ from django.contrib import admin
 
 from . import models
 
-# admin.site.register(models.Bus)
-admin.site.register(models.Driver)
-admin.site.register(models.Route)
-admin.site.register(models.Itinerary)
-admin.site.register(models.Passanger)
 
 @admin.register(models.Bus)
 class BusAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('id', 'identifier', 'capacity')
+
+
+@admin.register(models.Driver)
+class DriverAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'phone', 'email')
+
+
+@admin.register(models.Route)
+class RouteAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'duration')
+
+
+@admin.register(models.Itinerary)
+class ItineraryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'route', 'bus', 'driver', 'start_time', 'end_time')
+
+
+@admin.register(models.Passanger)
+class PassengerAdmin(admin.ModelAdmin):
+    list_display = ('id', 'itinerary', 'position', 'name', 'phone', 'emergency_name', 'emergency_phone')
