@@ -23,7 +23,7 @@ class RouteSerializer(serializers.HyperlinkedModelSerializer):
 class ItinerarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta(object):
         model = models.Itinerary
-        fields = ('id', 'route', 'bus', 'driver', 'start_time', 'end_time', 'capacity', 'capacity_sold')
+        fields = ('id', 'route', 'bus', 'driver', 'start_time', 'end_time', 'capacity', 'capacity_sold', 'duration')
 
 
 class PassengerSerializer(serializers.HyperlinkedModelSerializer):
