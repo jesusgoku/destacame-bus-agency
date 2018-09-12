@@ -21,8 +21,12 @@ class RouteAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'duration', 'average_passengers')
 
 
+class PassengerInline(admin.TabularInline):
+    model = models.Passanger
+
 @admin.register(models.Itinerary)
 class ItineraryAdmin(admin.ModelAdmin):
+    # inlines = (PassengerInline,)
     list_display = ('id', 'route', 'bus', 'driver', 'start_time', 'end_time', 'capacity', 'capacity_sold', 'duration')
     list_filter = ('route', 'bus', 'driver', 'start_time', 'bus__capacity')
 
