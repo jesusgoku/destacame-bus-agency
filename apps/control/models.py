@@ -12,6 +12,9 @@ class Bus(models.Model):
 
     identifier = models.CharField(_('Identifier'), max_length=255, unique=True)
 
+    def available_on(self, start_time, end_time):
+        return self.itinerary_set.filter(start_time__lte=end_time, end_time__gte=start_time).count() == 0
+
     def __str__(self):
         return self.identifier
 
@@ -26,6 +29,9 @@ class Driver(models.Model):
 
     phone = models.CharField(_('Phone'), max_length=50, null=True, blank=True)
     email = models.CharField(_('Email'), max_length=100, null=True, blank=True)
+
+    def available_on(self, start_time, end_time):
+        return self.itinerary_set.filter(start_time__lte=end_time, end_time__gte=start_time).count() == 0
 
     def __str__(self):
         return self.name
