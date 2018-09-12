@@ -84,7 +84,7 @@ class Itinerary(models.Model):
 
     @property
     def duration(self):
-        return (self.end_time - self.start_time).seconds / 3600
+        return (self.end_time - self.start_time).seconds / float(3600)
 
     capacity_sold.fget.short_description = _('Capacity sold')
 
