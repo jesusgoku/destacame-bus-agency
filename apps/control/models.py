@@ -82,11 +82,13 @@ class Itinerary(models.Model):
     def capacity_sold(self):
         return self.passanger_set.count()
 
+    capacity_sold.fget.short_description = _('Capacity sold')
+
     @property
     def duration(self):
         return (self.end_time - self.start_time).seconds / float(3600)
 
-    capacity_sold.fget.short_description = _('Capacity sold')
+    duration.fget.short_description = _('Duration')
 
     def position_available(self, position):
         return self.passanger_set.filter(position=position).count() == 0
