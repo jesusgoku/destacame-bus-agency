@@ -9,10 +9,10 @@ from django.utils.translation import gettext_lazy as _
 class Bus(models.Model):
     capacity = models.IntegerField(_('Capacity'), default=10)
 
-    idetifier = models.CharField(_('Idetifier'), max_length=255, unique=True)
+    identifier = models.CharField(_('Identifier'), max_length=255, unique=True)
 
     def __str__(self):
-        return self.idetifier
+        return self.identifier
 
     class Meta(object):
         verbose_name = _('Bus')
