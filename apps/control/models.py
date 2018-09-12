@@ -8,11 +8,15 @@ from django.utils.encoding import python_2_unicode_compatible
 from django.utils.dateformat import format
 from django.utils.translation import gettext_lazy as _
 
+from . import managers
+
 @python_2_unicode_compatible
 class Bus(models.Model):
     capacity = models.IntegerField(_('Capacity'), default=10)
 
     identifier = models.CharField(_('Identifier'), max_length=255, unique=True)
+
+    objects = managers.BusManager()
 
     def available_on(self, start_time, end_time):
         return self.itinerary_set.filter(start_time__lte=end_time, end_time__gte=start_time).count() == 0
@@ -31,6 +35,8 @@ class Driver(models.Model):
 
     phone = models.CharField(_('Phone'), max_length=50, null=True, blank=True)
     email = models.CharField(_('Email'), max_length=100, null=True, blank=True)
+
+    objects = managers.DriverManager()
 
     def available_on(self, start_time, end_time):
         return self.itinerary_set.filter(start_time__lte=end_time, end_time__gte=start_time).count() == 0
