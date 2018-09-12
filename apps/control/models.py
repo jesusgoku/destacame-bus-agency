@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
+from django.utils.dateformat import format
 from django.utils.translation import gettext_lazy as _
 
 @python_2_unicode_compatible
@@ -58,9 +59,9 @@ class Itinerary(models.Model):
     end_time = models.DateTimeField(_('End time'))
 
     def __str__(self):
-        return "{} - {} ({} / {})".format(
+        return "{} / {} ({} / {})".format(
             self.route,
-            self.start_time.strftime("%a, %d %b on %H:%M"),
+            format(self.start_time, 'l, d b, H:i'),
             self.bus,
             self.driver)
 
