@@ -74,6 +74,10 @@ class Itinerary(models.Model):
     def capacity_sold(self):
         return self.passanger_set.count()
 
+    @property
+    def duration(self):
+        return (self.end_time - self.start_time).seconds / 3600
+
     capacity_sold.fget.short_description = _('Capacity sold')
 
     def __str__(self):
