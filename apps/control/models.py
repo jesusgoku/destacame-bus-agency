@@ -122,6 +122,16 @@ class Passanger(models.Model):
     emergency_name = models.CharField(_('Emergency name'), max_length=255, null=True, blank=True)
     emergency_phone = models.CharField(_('Emergency phone'), max_length=50, null=True, blank=True)
 
+    def clean(self):
+        if self.position > self.itinerary.capacity:
+            raise ValidationError(_('Position out of range'))
+
+        if self.itinerary.capacity_sold >= self.itinerary.capacity:
+            raise ValidationError(_('Itinerary capacity completed'))
+
+        if not self.itinerary.position_available(self.position):
+            raise ValidationError(_('Position not available'))
+
     def __str__(self):
         return '{} {}'.format(self.itinerary, self.position)
 
