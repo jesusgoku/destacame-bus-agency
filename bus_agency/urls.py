@@ -16,6 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic.base import TemplateView
+from django.utils.translation import gettext_lazy as _
+
+admin.site.site_header = _('Bus agency')
+admin.site.site_title = _('Bus agency admin')
+admin.site.index_title = _('Bus agency admin')
 
 urlpatterns = [
     # url(r'^control/', include('apps.control.urls')),
