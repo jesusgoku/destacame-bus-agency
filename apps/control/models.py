@@ -81,6 +81,9 @@ class Itinerary(models.Model):
 
     capacity_sold.fget.short_description = _('Capacity sold')
 
+    def position_available(self, position):
+        return self.passanger_set.filter(position=position).count() == 0
+
     def clean(self):
         if self.start_time > self.end_time:
             raise ValidationError(_('End time is before start time'))
