@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.core.exceptions import ValidationError
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.dateformat import format
 from django.utils.translation import gettext_lazy as _
@@ -79,6 +80,19 @@ class Itinerary(models.Model):
         return (self.end_time - self.start_time).seconds / 3600
 
     capacity_sold.fget.short_description = _('Capacity sold')
+
+    def clean(self):
+        if self.start_time > self.end_time:
+            raise ValidationError(_('End time is before start time'))
+
+        if self.duration < self.route.duration:
+            raise ValidationError(_('Duration of itinerary is less than of route duration'))
+
+        if not self.bus.available_on(self.start_time, self.end_time):
+            raise ValidationError(_('Bus not available'))
+
+        if not self.driver.available_on(self.start_time, self.end_time):
+            raise ValidationError(_('Driver not available'))
 
     def __str__(self):
         return "{} / {} ({} / {})".format(
