@@ -49,6 +49,11 @@ class Route(models.Model):
 
     duration = models.FloatField(_('Duration'), null=True, blank=True)
 
+    def average_passengers(self):
+        itineraries = self.itinerary_set.count()
+        passengers = self.itinerary_set.aggregate(models.Count('passanger')).values()[0]
+        return passengers / itineraries if itineraries != 0 else 0
+
     def __str__(self):
         return self.name
 
