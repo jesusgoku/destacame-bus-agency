@@ -22,7 +22,7 @@ class RouteAdmin(admin.ModelAdmin):
 
 
 class PassengerInline(admin.TabularInline):
-    model = models.Passanger
+    model = models.Passenger
 
 @admin.register(models.Itinerary)
 class ItineraryAdmin(admin.ModelAdmin):
@@ -31,7 +31,7 @@ class ItineraryAdmin(admin.ModelAdmin):
     list_filter = ('route', 'bus', 'driver', 'start_time', 'bus__capacity')
 
 
-@admin.register(models.Passanger)
+@admin.register(models.Passenger)
 class PassengerAdmin(admin.ModelAdmin):
     list_display = ('id', 'itinerary', 'position', 'name', 'phone', 'emergency_name', 'emergency_phone')
     list_filter = ('itinerary',)

@@ -41,5 +41,5 @@ class ItinerarySerializer(ModelCleanValidateSerializer):
 
 class PassengerSerializer(ModelCleanValidateSerializer):
     class Meta(object):
-        model = models.Passanger
+        model = models.Passenger
         fields = ('id', 'itinerary', 'position', 'name', 'phone', 'emergency_name', 'emergency_phone',)

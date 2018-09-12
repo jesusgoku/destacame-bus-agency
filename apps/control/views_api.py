@@ -25,5 +25,5 @@ class ItineraryViewSet(viewsets.ModelViewSet):
 
 
 class PassengerViewSet(viewsets.ModelViewSet):
-    queryset = models.Passanger.objects.all()
+    queryset = models.Passenger.objects.all()
     serializer_class = serializers.PassengerSerializer

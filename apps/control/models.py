@@ -52,7 +52,7 @@ class Route(models.Model):
     @property
     def average_passengers(self):
         itineraries = float(self.itinerary_set.count())
-        passengers = self.itinerary_set.aggregate(models.Count('passanger')).values()[0]
+        passengers = self.itinerary_set.aggregate(models.Count('passenger')).values()[0]
         return passengers / itineraries if itineraries != 0 else float(0)
 
     def __str__(self):
@@ -80,7 +80,7 @@ class Itinerary(models.Model):
 
     @property
     def capacity_sold(self):
-        return self.passanger_set.count()
+        return self.passenger_set.count()
 
     capacity_sold.fget.short_description = _('Capacity sold')
 
@@ -91,7 +91,7 @@ class Itinerary(models.Model):
     duration.fget.short_description = _('Duration')
 
     def position_available(self, position):
-        return self.passanger_set.filter(position=position).count() == 0
+        return self.passenger_set.filter(position=position).count() == 0
 
     def clean(self):
         if self.start_time > self.end_time:
@@ -119,7 +119,7 @@ class Itinerary(models.Model):
 
 
 @python_2_unicode_compatible
-class Passanger(models.Model):
+class Passenger(models.Model):
     itinerary = models.ForeignKey(Itinerary, on_delete=models.CASCADE, verbose_name=_('Itinerary'))
 
     position = models.IntegerField(_('Position'), validators=[MinValueValidator(1)])
