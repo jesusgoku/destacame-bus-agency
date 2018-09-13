@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -23,8 +22,6 @@ msgid "Capacity"
 msgstr "Capacidad"
 
 #: apps/control/models.py:17
-#, fuzzy
-#| msgid "Indetifier"
 msgid "Identifier"
 msgstr "Patente"
 
@@ -78,10 +75,8 @@ msgid "End time"
 msgstr "Llegada"
 
 #: apps/control/models.py:91
-#, fuzzy
-#| msgid "Capacity"
 msgid "Capacity sold"
-msgstr "Capacidad"
+msgstr "Capacidad vendida"
 
 #: apps/control/models.py:104
 msgid "End time is before start time"
@@ -138,3 +133,11 @@ msgstr "Pasajero"
 #: apps/control/models.py:154
 msgid "Passengers"
 msgstr "Pasajeros"
+
+#: bus_agency/urls.py:21
+msgid "Bus agency"
+msgstr "Agencia de buses"
+
+#: bus_agency/urls.py:22 bus_agency/urls.py:23
+msgid "Bus agency admin"
+msgstr "Administrador agencia de buses"
