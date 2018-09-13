@@ -30,7 +30,7 @@ class DriverSerializer(ModelCleanValidateSerializer):
 class RouteSerializer(ModelCleanValidateSerializer):
     class Meta(object):
         model = models.Route
-        fields = ('id', 'name', 'duration',)
+        fields = ('id', 'name', 'duration', 'average_passengers',)
 
 
 class ItinerarySerializer(ModelCleanValidateSerializer):
