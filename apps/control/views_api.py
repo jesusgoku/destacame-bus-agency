@@ -2,6 +2,7 @@ from rest_framework import viewsets
 
 from . import models
 from . import serializers
+from . import filters
 
 
 class BusViewSet(viewsets.ModelViewSet):
@@ -28,7 +29,8 @@ class RouteViewSet(viewsets.ModelViewSet):
 class ItineraryViewSet(viewsets.ModelViewSet):
     queryset = models.Itinerary.objects.all()
     serializer_class = serializers.ItinerarySerializer
-    filter_fields = ('id', 'start_time', 'end_time',)
+    # filterset_fields = ('id', 'start_time', 'end_time',)
+    filter_class = filters.ItineraryFilter
     search_fields = ('route__name', 'driver__name', 'bus__identifier',)
 
 
