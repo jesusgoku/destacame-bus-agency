@@ -38,6 +38,8 @@ pipenv run python manage.py loaddata db.json
 pipenv run python manage.py compilemessages # Skip for not translations
 pipenv run python manage.py runserver
 # Open your browser on: http://localhost:8000
+# Username: destacame
+# Password: destacame
 ```
 
 ## Running on Docker
@@ -53,6 +55,8 @@ docker-compose run app python manage.py loaddata db.json
 docker-compose up
 
 # Open your browser on: http://localhost:8000
+# Username: destacame
+# Password: destacame
 ```
 
 ## TODO
