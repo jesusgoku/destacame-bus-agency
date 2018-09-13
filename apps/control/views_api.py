@@ -37,5 +37,5 @@ class ItineraryViewSet(viewsets.ModelViewSet):
 class PassengerViewSet(viewsets.ModelViewSet):
     queryset = models.Passenger.objects.all()
     serializer_class = serializers.PassengerSerializer
-    filter_fields = ('id', 'position', 'name', 'phone', 'emergency_name', 'emergency_phone')
-    search_fields = ('name', 'phone', 'emergency_name', 'emergency_phone', )
+    filter_fields = ('id', 'position', 'name', 'phone', 'emergency_name', 'emergency_phone', 'itinerary',)
+    search_fields = ('name', 'phone', 'emergency_name', 'emergency_phone',)
