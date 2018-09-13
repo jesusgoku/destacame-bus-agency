@@ -8,6 +8,7 @@ django = "~=1.11"
 djangorestframework = "*"
 markdown = "*"
 django-filter = "*"
+"psycopg2" = "*"
 
 [dev-packages]
 pylint = "<2.0.0"
