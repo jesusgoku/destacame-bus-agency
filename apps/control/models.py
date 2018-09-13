@@ -78,6 +78,8 @@ class Itinerary(models.Model):
     start_time = models.DateTimeField(_('Start time'))
     end_time = models.DateTimeField(_('End time'))
 
+    objects = managers.ItineraryManager()
+
     @property
     def capacity(self):
         return self.bus.capacity
