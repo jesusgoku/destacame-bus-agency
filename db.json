@@ -3,7 +3,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$36000$34ZEODiKDllw$J5KB+8YAYBrD92gM/sHb02KZCUjiSPfC7Y6qvdmiIsU=",
-    "last_login": "2018-09-12T17:16:38.390Z",
+    "last_login": "2018-09-13T06:22:20.427Z",
     "is_superuser": true,
     "username": "jesusgoku",
     "first_name": "",
@@ -12,6 +12,23 @@
     "is_staff": true,
     "is_active": true,
     "date_joined": "2018-09-12T17:15:56.772Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}, {
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$5rTBW52KKNYd$5qNubxrrBEvU/oHf63troDfvARvd/5sqeesQkqvSIlw=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "destacame",
+    "first_name": "",
+    "last_name": "",
+    "email": "nel@destacame.cl",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2018-09-13T06:49:48.028Z",
     "groups": [],
     "user_permissions": []
   }
