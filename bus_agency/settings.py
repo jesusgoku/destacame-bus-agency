@@ -85,9 +85,16 @@ DATABASES = {
     #     'USERNAME': 'bus_agency',
     #     'PASSWORD': 'bus_agency',
     # },
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # },
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.setdefault("DB_NAME", "postgres"),
+        'USER': os.environ.setdefault("DB_USER", "postgres"),
+        'HOST': os.environ.setdefault("DB_HOST", "db"),
+        'PORT': os.environ.setdefault("DB_PORT", "5432"),
     },
 }
 
