@@ -58,7 +58,7 @@ class Route(models.Model):
     @property
     def average_passengers(self):
         itineraries = float(self.itinerary_set.count())
-        passengers = self.itinerary_set.aggregate(models.Count('passenger')).values()[0]
+        passengers = self.itinerary_set.aggregate(models.Count('passenger')).get('passenger__count')
         return passengers / itineraries if itineraries != 0 else float(0)
 
     def __str__(self):
