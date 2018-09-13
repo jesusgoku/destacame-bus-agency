@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from django.views.generic.base import TemplateView
+from django.views.generic.base import TemplateView, RedirectView
 from django.utils.translation import gettext_lazy as _
 
 admin.site.site_header = _('Bus agency')
@@ -27,5 +27,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^api/', include('apps.control.urls')),
-    url(r'^$', TemplateView.as_view(template_name='layouts/default.html')),
+    # url(r'^$', TemplateView.as_view(template_name='layouts/default.html')),
+    url(r'^$', RedirectView.as_view(url='/admin', permanent=False))
 ]
