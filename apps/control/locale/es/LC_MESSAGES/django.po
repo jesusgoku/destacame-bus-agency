@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-11 23:35-0300\n"
+"POT-Creation-Date: 2018-09-12 22:54-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,89 +18,123 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: apps/control/models.py:10
+#: apps/control/models.py:15 apps/control/models.py:85
 msgid "Capacity"
 msgstr "Capacidad"
 
-#: apps/control/models.py:12
+#: apps/control/models.py:17
 #, fuzzy
 #| msgid "Indetifier"
-msgid "Idetifier"
+msgid "Identifier"
 msgstr "Patente"
 
-#: apps/control/models.py:18 apps/control/models.py:54
+#: apps/control/models.py:28 apps/control/models.py:75
 msgid "Bus"
 msgstr "Bus"
 
-#: apps/control/models.py:19
+#: apps/control/models.py:29
 msgid "Buses"
 msgstr "Buses"
 
-#: apps/control/models.py:24 apps/control/models.py:39
-#: apps/control/models.py:78
+#: apps/control/models.py:34 apps/control/models.py:54
+#: apps/control/models.py:133
 msgid "Name"
 msgstr "Nombre"
 
-#: apps/control/models.py:26 apps/control/models.py:79
+#: apps/control/models.py:36 apps/control/models.py:134
 msgid "Phone"
 msgstr "Teléfono"
 
-#: apps/control/models.py:27
+#: apps/control/models.py:37
 msgid "Email"
 msgstr "Email"
 
-#: apps/control/models.py:33 apps/control/models.py:55
+#: apps/control/models.py:48 apps/control/models.py:76
 msgid "Driver"
 msgstr "Conductor"
 
-#: apps/control/models.py:34
+#: apps/control/models.py:49
 msgid "Drivers"
 msgstr "Conductores"
 
-#: apps/control/models.py:41
+#: apps/control/models.py:56 apps/control/models.py:97
 msgid "Duration"
 msgstr "Duración"
 
-#: apps/control/models.py:47 apps/control/models.py:53
+#: apps/control/models.py:68 apps/control/models.py:74
 msgid "Route"
 msgstr "Ruta"
 
-#: apps/control/models.py:48
+#: apps/control/models.py:69
 msgid "Routes"
 msgstr "Rutas"
 
-#: apps/control/models.py:57
+#: apps/control/models.py:78
 msgid "Start time"
 msgstr "Partida"
 
-#: apps/control/models.py:58
+#: apps/control/models.py:79
 msgid "End time"
 msgstr "Llegada"
 
-#: apps/control/models.py:68 apps/control/models.py:74
+#: apps/control/models.py:91
+#, fuzzy
+#| msgid "Capacity"
+msgid "Capacity sold"
+msgstr "Capacidad"
+
+#: apps/control/models.py:104
+msgid "End time is before start time"
+msgstr "El tiempo de llegada es anterior al tiempo de partida"
+
+#: apps/control/models.py:107
+msgid "Duration of itinerary is less than of route duration"
+msgstr "La duración del viaje es menor a la duración de la ruta"
+
+#: apps/control/models.py:110
+msgid "Bus not available"
+msgstr "Bus no disponible"
+
+#: apps/control/models.py:113
+msgid "Driver not available"
+msgstr "Conductor no disponible"
+
+#: apps/control/models.py:123 apps/control/models.py:129
 msgid "Itinerary"
 msgstr "Itinerario"
 
-#: apps/control/models.py:69
+#: apps/control/models.py:124
 msgid "Itineraries"
 msgstr "Itinerarios"
 
-#: apps/control/models.py:76
+#: apps/control/models.py:131
 msgid "Position"
 msgstr "Posición"
 
-#: apps/control/models.py:81
+#: apps/control/models.py:136
 msgid "Emergency name"
 msgstr "Nombre de emergencia"
 
-#: apps/control/models.py:82
+#: apps/control/models.py:137
 msgid "Emergency phone"
 msgstr "Teléfono de emergencia"
 
-#: apps/control/models.py:88
+#: apps/control/models.py:141
+msgid "Position out of range"
+msgstr "Posición fuera de rango"
+
+#: apps/control/models.py:144
+msgid "Itinerary capacity completed"
+msgstr "Capacidad del viaje completa"
+
+#: apps/control/models.py:147
+msgid "Position not available"
+msgstr "Posción no disponible"
+
+#: apps/control/models.py:153
 msgid "Passenger"
 msgstr "Pasajero"
 
-#: apps/control/models.py:89
+#: apps/control/models.py:154
 msgid "Passengers"
 msgstr "Pasajeros"
