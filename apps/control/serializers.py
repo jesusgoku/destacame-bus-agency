@@ -43,3 +43,8 @@ class PassengerSerializer(ModelCleanValidateSerializer):
     class Meta(object):
         model = models.Passenger
         fields = ('id', 'itinerary', 'position', 'name', 'phone', 'emergency_name', 'emergency_phone',)
+
+
+class AvailableOnSerializer(serializers.Serializer):
+    start_time = serializers.DateTimeField()
+    end_time = serializers.DateTimeField()
